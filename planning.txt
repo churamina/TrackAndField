@@ -1,0 +1,67 @@
+Gitの基本操作
+	・git pull
+	・git add
+	・git commit -m "comment"
+	・git push
+
+Ruby on rails ----- db -----
+
+	users(ユーザー)	: {name: string, email: string, password: string, age: integer}
+	dialies(部誌)	: {content: text}
+	records(記録)	: {event: string, time: time, distance: integer}
+	posts(お知らせなど)	: {content: text}
+
+
+
+Ruby on rails ----- routes -----
+
+	----- home -----
+		get "/" => "home#top"
+	
+	----- users -----
+		get "login" => "users#login"
+		get "signup" => "users#new"
+		post "/users/create" => "users#create"
+		get "/users/:id/show" => "users#show"
+		get "/users/:id/edit" => "users#edit"
+		post "/users/:id/update => "users#update"
+		post "/users/:id/destroy" => "users#destroy"
+
+	----- dialies -----
+		get "/dialies/index" => "dialies#index"
+		get "/dialies/new" => "dialies#new"
+		post "/dialies/create" => "dialies#create"
+		get "/dialies/:id/show" => "dialies#show"
+		get "/dialies/:id/edit" => "dialies#edit"
+		post "/dialies/:id/update" => "dialies#update"
+		post "/dialies/:id/destroy" => "dialies#destroy"
+	
+	----- records ------
+		get "/records/index" => "records#index"
+		get "/records/new" => "records#new"
+		post "/records/create" => "records#create"
+		get "/records/:id/show" => "records#show"
+		get "/records/:id/edit" => "records#edit"
+		post "/records/:id/update" => "records#update"
+		post "/records/:id/destroy" => "records#destroy"
+	
+	----- posts -----
+		get "/posts/index" => "posts#index"
+		get "/posts/new" => "posts#new"
+		post "/posts/create" => "posts#create"
+		get "/posts/:id/show" => "posts#show"
+		get "/posts/:id/edit" => "posts#edit"
+		post "/posts/:id/update" => "posts#update"
+		post "/posts/:id/destroy" => "posts#destroy"
+	
+
+
+Ruby on rails ----- controllers -----
+
+	----- home -----
+
+	----- users ------
+
+	----- dialies ------
+
+	----- posts -----
