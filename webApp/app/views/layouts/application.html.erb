@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Track and Field</title>
-		<meta charset="utf-8">
-		<link rel="icon" href="https://www.shibumaku.jp/wp-content/uploads/2020/01/cropped-icon_shibumaku-32x32.png">
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-			<%= csrf_meta_tags %>
-			<%= csp_meta_tag %>
+  <head>
+    <title>TaF</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-			<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-			<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-	</head>
-	<body>
-		<header>
-			<div class="header-container">
-				<div class="header-logo"><h1>渋谷教育学園幕張中学・高校陸上競技部</h1></div>
-				<div class="fa fa-bars"></div>
-			</div>
-		</header>
-		<%= yield %>
-	</body>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
 </html>
