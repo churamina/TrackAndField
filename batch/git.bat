@@ -2,6 +2,8 @@
 setlocal
 
 	rem ëIëéà
+	:start
+	cls
 	echo.
 	echo 1. git pull
 	echo.
@@ -24,8 +26,8 @@ setlocal
 	cd c:\TrackAndField
 	git pull origin master
 	pause >nul
-	start "" "C:\Users\sugiy\Desktop\batch\TrackAndField\TrackAndField_backUp.bat"
-	exit
+	goto return
+	start "" "C:\TrackAndField\batch\TrackAndField_backUp.bat"
 	
 	rem add
 	:add
@@ -48,7 +50,7 @@ setlocal
 	git commit -m "%inputstr%"
 	git push origin master
 	pause >nul
-	exit
+	goto return
 	
 	rem status
 	:status
@@ -57,7 +59,7 @@ setlocal
 	cd c:\TrackAndField
 	git status
 	pause >nul
-	exit
+	goto return
 	
 	rem rails
 	:rails
@@ -66,5 +68,19 @@ setlocal
 	cd c:\TrackAndField\webApp
 	rails server
 	pause >nul
+	goto return
+	
+	rem return
+	:return
+	cls
+	echo.
+	echo. èIóπÇµÇ‹Ç∑Ç©ÅH
+	choice
+	echo.
+	if %errorlevel%==1 goto exit
+	goto start
+	
+	:exit
+	exit
 	
 endlocal
